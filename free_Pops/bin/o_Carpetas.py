@@ -1,7 +1,11 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-#Creado por Diego Alberto Parra Garzón
-#Bogotá - Colombia 
+#Universidad Distrital Francisco Jose  
+#Grupo de fisica e informatica
+#Dr Julian Andres Salamanca 
+#Diego Alberto Parra Garzón 
+#Colombia, Bogota D.C.
+#Este programa cuenta con licencia gpl2
 import os
 import time 
 import shutil

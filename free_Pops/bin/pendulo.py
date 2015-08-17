@@ -1,5 +1,11 @@
 #!/usr/bin/python
 #*-* coding:utf-8 *-*
+#Universidad Distrital Francisco Jose  
+#Grupo de fisica e informatica
+#Dr Julian Andres Salamanca 
+#Diego Alberto Parra Garzón 
+#Colombia, Bogota D.C.
+#Este programa cuenta con licencia gpl2
 from visual import *
 import numpy as np
 import math

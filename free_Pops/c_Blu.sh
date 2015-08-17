@@ -1,5 +1,11 @@
 #!/bin/bash
 #/etc/init.d/bluetooth restart
+#Universidad Distrital Francisco Jose  
+#Grupo de fisica e informatica
+#Dr Julain Andres Salamanca 
+#Diego Alberto Parra Garzón 
+#Colombia, Bogota D.C.
+#Este programa cuenta con licencia gpl2
 hcitool dev > log.txt | grep -e 'hci0' log.txt > mac.txt
 cut -d "0" -f 2,3  mac.txt > MAC.txt
 MAC=`cat MAC.txt`
