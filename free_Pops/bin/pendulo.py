@@ -12,7 +12,7 @@ class App:
         W1 = np.loadtxt('importantes/angular.dat')
         T1 = np.loadtxt('importantes/periodo.dat')
 	scene = display()
-	scene.title='Pendulo Simple'
+	scene.title='FREE POPS 1.0'
 	scene.autoscale = 0
 	self.phi0 = pi * 0.1
 	self.phi = self.phi0
