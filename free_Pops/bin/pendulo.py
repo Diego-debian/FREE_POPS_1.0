@@ -3,7 +3,9 @@
 from visual import *
 import numpy as np
 import math
-
+import time
+import os
+import Gnuplot
 
 class App:
     def Display(self):
@@ -12,17 +14,18 @@ class App:
         W1 = np.loadtxt('importantes/angular.dat')
         T1 = np.loadtxt('importantes/periodo.dat')
 	scene = display()
-	scene.title='FREE POPS 1.0'
+	scene.title='Pendulo Simple'
 	scene.autoscale = 0
 	self.phi0 = pi * 0.1
 	self.phi = self.phi0
-	self.m = 1.
+	self.m = 0.050
 	self.g = 9.8
 	self.l = l1
-	self.dt = 1./50.
 	self.f = f1
 	self.W = W1
 	self.T = T1
+	self.dt = 0.00767*7.27/self.T
+	
 
     def Frame(self):
 	SP = frame()
@@ -34,31 +37,79 @@ class App:
 	label(pos=(-7,6,0), text='F. angular\n %s [rad/s]' %str(self.W), color =color.yellow)
 	label(pos=(-7,2,0), text='Periodo \n %s [s]' %str(self.T), color =color.yellow)
 	label(pos=(-7,-2,0), text='Longitud \n %s [m]' %str(self.l), color =color.yellow)
-#	label(pos=(-1,10,0), text='F.angular\n%s[rad/s]' %str(self.W), color =color.yellow)
-#	label(pos=(5.5,10,0), text='  Periodo \n %s [s]' %str(self.T), color =color.yellow)
-
 	self.phip= 0
-
-	while self.dt < 30 :
-	    self.phipp = -(self.m*self.g*self.l)*self.phi
+	self.t0 = float(time.time())
+	os.system("rm datos/datos_ttheta.dat")
+	os.system("rm datos/datos_txy.dat")
+	os.system("rm datos/datos_xvx.dat")
+	self.gp = Gnuplot.Gnuplot()
+	self.gp1 = Gnuplot.Gnuplot()
+	while 1 :
+	    self.tf = float(time.time())
+	    self.tt = self.tf - self.t0
+      	    self.phipp = -(self.m*self.g*self.l)*self.phi
             self.phip = self.phip + self.phipp*self.dt
             self.phi = self.phi + self.phip*self.dt
-	    self.y = self.l - self.l*np.cos(self.phi*self.dt)
-	    self.x = self.l*np.sin(self.phi*self.dt)
-	    self.vx = -self.W*self.x*np.sin(self.phi*self.dt)
-	    self.vy = self.W*self.y*np.cos(self.phi*self.dt)
-	    phis = str(round(self.phi, 3))
-	    xs = str(round(self.x, 4))
-	    ys = str(round(self.y, 6))
-	    vxs = str(round(self.vx, 5))
-	    vys = str(round(self.vy, 5))
-	    #VS = (self.vx**2 + self.vy**2)**(0.5)
+	    tetha = 180*self.phi*0.26
+	    self.phis = str(round(tetha, 3))
+	    self.y = 0.5*self.l*cos(tetha)
+	    self.x = 0.5*self.l*sin(tetha)
+	    self.vx = 0.5*self.W*self.l*cos(tetha)
+	    self.vy = -0.5*self.W*self.l*sin(tetha)
+	    self.ax = -0.5*self.W*self.W*self.l*sin(tetha)
+	    self.ay = -0.5*self.W*self.l*cos(tetha)
+	    self.Kx = 0.5*self.m*self.vx**2
+	    self.Ux = 0.5*self.l*self.m*self.g*self.x**2
+	    self.xs = str(round(self.x, 3))
+	    self.ys = str(round(self.y, 3))
+	    self.vxs = str(round(self.vx, 3))
+	    self.vys = str(round(self.vy, 3))
+	    self.axs = str(round(self.ax, 3))
+	    self.ays = str(round(self.ay, 3))
+	    self.Kxs = str(round(self.Kx, 3))
+	    self.Uxs = str(round(self.Ux, 4))
+	    self.tt = str(round(self.tt, 4))
+	    self.EM = self.Kx + self.Ux
             SP.rotate(axis =(0,0,1), angle = self.phip*self.dt)
-	    #label(pos=(-7,2,0), text='Posicion en x \n %s [s]' %str(self.x), color =color.yellow)
-	    #print "\t    angulo \t   Posición x\t      Posición y\t "
-	    print phis , "\t" , xs , "\t" , ys , "\t", vxs , "\t" , vys
+	    print self.tt, "\t", self.phis , "	" , self.xs , "	"  , self.vxs , "	",  self.axs , "	",  self.Kxs, "	", self.Uxs, "\t", self.EM, "	\n"	
     	    rate(50)
-    
+	    self.Graf1()
+	    self.Graf2()
+	else:
+	    self.gp("exit")	
+	    self.gp1("exit")
+	    print "Fin del Programa"
+
+    def Graf1(self):
+        self.gp("set title 'Variación del angulo en el tiempo'")
+        self.gp("set xlabel 'tiempo [s]'") 
+        self.gp("set ylabel 'Posición ángulo [grados]'")
+	self.gp("set autoscale")
+        archi = open('datos/datos_ttheta.dat','a+')
+	archi.write (self.tt)
+        archi.write ("\t")
+        archi.write (self.phis)
+	archi.write("\n")
+        archi.close()
+        self.gp("plot 'datos/datos_ttheta.dat' title ' ' with lines")
+	
+
+    def Graf2 (self):
+        self.gp1("set title 'TIMPO VS Distancia x vs Distancia y'")
+        self.gp1("set xlabel 'tiempo [s]'") 
+        self.gp1("set ylabel 'Distancia x [m]'")
+        self.gp1("set zlabel 'Distancia y [m]'")
+	self.gp1("set autoscale")
+	archi1 = open('datos/datos_txy.dat','a+')
+	archi1.write (self.tt)
+        archi1.write ("\t")
+        archi1.write (self.xs)
+	archi1.write("\t")
+	archi1.write(self.ys)
+	archi1.write("\n")
+        archi1.close()
+#        self.gp1("splot 'datos/datos_txy.dat' title ' ' with lines")
+
     def __init__(self):
 	self.Display()
 	self.Frame()

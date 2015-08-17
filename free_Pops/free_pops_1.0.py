@@ -20,7 +20,7 @@ import Tkinter
 import shutil
 
 class App:
-    def Atenua(self):
+    def BICHO(self):
         bicho = Tk()
         bicho.geometry("610x430+0+0")
         bicho.config(bg="white")
@@ -66,7 +66,7 @@ class App:
 #------------------------------------- Funcion limpiar pantalla ---------------------------------------------------
         def Reset():
 	    tkMessageBox.showinfo("FREE POPS 1.0", message= "! Limpiando, por favor espere ¡")
-	    os.system("python per1.py &")
+	    os.system("python free_pops_1.0.py &")
 	    exit()
 
 #---------------------------------- LLamando a la funcion imagenes del microcontrolador ----------------------------
@@ -146,7 +146,7 @@ class App:
 
    
     def __init__(self):
-        self.Atenua()
+        self.BICHO()
         self.__del__()
 
     def __del__(self):
