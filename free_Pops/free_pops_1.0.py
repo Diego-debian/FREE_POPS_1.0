@@ -2,7 +2,7 @@
 # *-* coding:utf-8 *-*
 #Universidad Distrital Francisco Jose  
 #Grupo de fisica e informatica
-#Dr Julain Andres Salamanca 
+#Dr Julain Andres Salamanca Bernal
 #Diego Alberto Parra Garzón 
 #Colombia, Bogota D.C.
 #Este programa cuenta con licencia gpl2
@@ -20,14 +20,13 @@ import Tkinter
 import shutil
 
 class App:
-    def Atenua(self):
+    def Pendulo(self):
         bicho = Tk()
         bicho.geometry("610x430+0+0")
         bicho.config(bg="white")
         bicho.title("free_pops_1.0")
         bicho.resizable(width=0, height=0)
-      
-        
+           
         def Salir():
 	    tkMessageBox.showinfo("free_pops_1.0", message= "! Cerrando el programa ¡")
             exit()
@@ -76,7 +75,7 @@ class App:
 #---------------------------------- LLamando a la funcion imagenes del microcontrolador ----------------------------
         def Comenzar():
             tkMessageBox.showinfo("free_pops_1.0", message= "! Procediendo con la captura de datos, tiempo 30 [s] ¡")
-	    os.system("python  bin/i_micro.py &")
+	    os.system("xterm -T free_pops_1.0 -geometry 50x8 +cm -bg blue -e python  bin/i_micro.py &")
 #................... Botones analisis de datos .................................
             x2 = int(70)
 	    lblAnalizar = Label(bicho, text="\nANALIZAR\n DATOS ", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=140+x2, y=256)             
@@ -104,7 +103,14 @@ class App:
 	    os.system("sh bin/d_Blu.sh &")
 
 	def Boton():
-	    tkMessageBox.showinfo("free_pops_1.0", message= "Para detener la visualización de datos, oprima el botón reset del Dispositio")
+	    tkMessageBox.showinfo("free_pops_1.0", message= "Para detener la visualización de datos, cierre la ventana de datos 'color azul' u oprima el botón reset del Dispositio ")
+
+# ------------------------------ Definiendo Funcion firmware -----------------------------
+	
+	def Firmware():
+	    tkMessageBox.showinfo("free_pops_1.0", message= "Conecte la tarjeta microcontroladora arduino uno, con un microcontrolador listo para su uso.\n\nProcediendo con el instalador del firmware")
+	    os.system("python bin/firmware/G_firmware.py")
+
 
 	    
 
@@ -137,7 +143,7 @@ class App:
         btnPendulo= Label(bicho, image=imgPendulo,  height=146, width =108).place(x=430, y=460+yn)
         lblFisinfor = Label(bicho, text=" Pendulo Simple ", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=430, y=610+yn)
         lblFisinfor = Label(bicho, text=" GRUPO DE FISICA E INFOMATICA ", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=360, y=371+yn)
-	lblInfo = Label(bicho, text="Dr. Julian Andres Salamanca\n Diego Alberto Parra Garzón", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=400, y=390+yn)
+	lblInfo = Label(bicho, text="Dr. Julian Andres Salamanca \n Diego Alberto Parra Garzón", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=400, y=390+yn)
 
 
 #---------------------- Botones Bluetooth -----------------------------------------------------------
@@ -146,11 +152,14 @@ class App:
         btnConectar= Button(bicho, text= " ON ", width=5, height=1, command= Verifica).place(x=20, y=350-y1)            
         btnDesconectar= Button(bicho, text= " OFF ", width=5, height=1, command= Bl_off).place(x=20, y=380-y1)  
 	btnSalir=Button(bicho, text = "Salir", command=Salir, height=1, width =5).place(x=20, y=410-y1)
+
+#---------------------- Botones firmware -----------------------------------
+	btnfirmware=Button(bicho, text = "Firmware", command=Firmware, height=1, width =5).place(x=340, y=380)
         bicho.mainloop()  
 
    
     def __init__(self):
-        self.Atenua()
+        self.Pendulo()
         self.__del__()
 
     def __del__(self):

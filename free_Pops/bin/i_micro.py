@@ -31,14 +31,17 @@ class App:
             x = arduino.readline()
             tf = float(time.time())
             tt = tf - t0
+	    tts = str(round(tt, 3))
             xo = str(x)
             io = str(tt)
-            print  "\t", tt , " \t", x 
-            archi.write (io)
+	    print  "\n\n \t\t CAPTURANDO DATOS"
+	    print  "\n\n      Tiempo [s] "  , " \t Voltaje [mV]"
+            print  "\t", tts , "\t \t   ", xo
+            archi.write (tts)
             archi.write (" ")
             archi.write (xo)
             archi.close()
-            gp("plot 'datos/datos_1.dat' with lines")
+            gp("plot 'datos/datos_1.dat' title ' ' with lines")
         arduino.write("b")	
         exit()
     
