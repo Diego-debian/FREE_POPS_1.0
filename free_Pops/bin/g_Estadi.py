@@ -28,7 +28,7 @@ class App:
         self.y6 = f2[:,1]
         self.n_D = int(self.x4.size)
         self.n_D1 = int(self.x5.size)
-        self.nO = float(self.n_D/2)
+        self.nO = float((2+self.n_D)/2)
         self.Fr = self.nO/30
         self.Fr1 = str(round(self.Fr, 2))
         self.T = 1/self.Fr
@@ -60,11 +60,11 @@ class App:
         pl.title('Pendientes')
         pl.xlabel('Tiempo [s]')
         pl.ylabel('Voltaje [mV]')
-        pl.axis([0, 30, -20, 20])
-        pl.text(6, 12, r' frecuencia [Hz]')
-        pl.text(11, 8, r' '+ str(self.Fr1) )
-        pl.text(6, -8, r'Longitud cuerda [m]')
-        pl.text(11, -12, r' '+ str(self.L1) )
+        pl.axis([0, 30, -20, 500])
+        pl.text(6, 250, r' frecuencia [Hz]')
+        pl.text(11, 200, r' '+ str(self.Fr1) )
+        pl.text(6, 408, r'Longitud cuerda [m]')
+        pl.text(14, 360, r' '+ str(self.L1) )
         pl.plot(self.x4, self.y5)
         
     def Graf3(self):

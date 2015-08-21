@@ -5,5 +5,7 @@
 #Diego Alberto Parra Garzón 
 #Colombia, Bogota D.C.
 #Este programa cuenta con licencia gpl2
+
 ARCHIVO=`cat datos/name.dat`
 mv -f "$ARCHIVO" Carpetas
+

@@ -22,13 +22,15 @@ import shutil
 class App:
     def Pendulo(self):
         bicho = Tk()
-        bicho.geometry("610x430+0+0")
+        bicho.geometry("610x430+180+60")
         bicho.config(bg="white")
         bicho.title("free_pops_1.0")
         bicho.resizable(width=0, height=0)
            
         def Salir():
 	    tkMessageBox.showinfo("free_pops_1.0", message= "! Cerrando el programa ¡")
+	    os.system("rm MAC.txt MACD.txt puerto.txt")
+
             exit()
 
         def Verifica():
@@ -49,8 +51,13 @@ class App:
 		#Valido()
                 arduino = serial.Serial("/dev/rfcomm0", 9600)
 		arduino.close()  
-		time.sleep(10)
-		Verifica()
+		time.sleep(6)
+                os.system("sh c_Blu.sh &")
+		#Valido()
+                arduino = serial.Serial("/dev/rfcomm0", 9600)
+		arduino.close()  
+		time.sleep(6)
+		
         
         def Valido():
 # ................. Botones menu de inicio ....................................
@@ -64,33 +71,34 @@ class App:
        
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Crear carpeta de los datos segun su fecha y hora @@@@@@@@@@@@@@@@@@@@@
         def Carpetas():
-	    os.system("python prueba.py")
+	    os.system("python prueba.py &")
 
 #------------------------------------- Funcion limpiar pantalla ---------------------------------------------------
         def Reset():
 	    tkMessageBox.showinfo("free_pops_1.0", message= "! Limpiando, por favor espere ¡")
 	    os.system("python free_pops_1.0.py &")
+	    os.system("rm MAC.txt MACD.txt puerto.txt")
 	    exit()
 
 #---------------------------------- LLamando a la funcion imagenes del microcontrolador ----------------------------
         def Comenzar():
             tkMessageBox.showinfo("free_pops_1.0", message= "! Procediendo con la captura de datos, tiempo 30 [s] ¡")
-	    os.system("xterm -T free_pops_1.0 -geometry 50x8 +cm -bg blue -e python  bin/i_micro.py &")
+	    os.system("xterm -T free_pops_1.0 -geom 50x8+185+100 +cm -bg blue -e python  bin/i_micro.py & ")
 #................... Botones analisis de datos .................................
             x2 = int(70)
 	    lblAnalizar = Label(bicho, text="\nANALIZAR\n DATOS ", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=140+x2, y=256)             
             btnAnalizar = Button(bicho, text= "Analizar", width=5, height=1, command= Analizar).place(x=140+x2, y=320) 	
             btnGraf= Button(bicho, text= "Graficar", width=5, height=1, command= Graficar).place(x=140+x2, y=350) 	
-            btnSimulacion= Button(bicho, text= "Simulación", width=5, height=1, command= Simular).place(x=140+x2, y=380) 	
+            btnAnimacion= Button(bicho, text= "Animación", width=5, height=1, command= Simular).place(x=140+x2, y=380) 	
 
 #--------------------Definiendo Funcion analizar datos -------------------------------
 	def Graficar():
             tkMessageBox.showinfo("free_pops_1.0", message= "! Realizando las graficas ¡")
-	    os.system("python 'bin/g_Estadi.py'")
+	    os.system("python 'bin/g_Estadi.py' &")
 		
 	def Analizar():
             tkMessageBox.showinfo("free_pops_1.0", message= "! Ahora se analizan los datos capturados y se procede a obtener la frecuencia del sistema ¡")
-	    os.system("mv Graf.png datos/Graf.png")
+	    os.system("mv Graf.png datos/Graf.png &")
 	    i_Estad()
 	
 	def Simular():
@@ -100,6 +108,7 @@ class App:
 #---------------------------------- Bluetooth desconectado ----------------------------
 	def Bl_off():
 	    tkMessageBox.showinfo("free_pops_1.0", message= "!Bluetooth desconectado¡")
+	    os.system("rm MAC.txt MACD.txt puerto.txt")
 	    os.system("sh bin/d_Blu.sh &")
 
 	def Boton():
@@ -109,7 +118,7 @@ class App:
 	
 	def Firmware():
 	    tkMessageBox.showinfo("free_pops_1.0", message= "Conecte la tarjeta microcontroladora arduino uno, con un microcontrolador listo para su uso.\n\nProcediendo con el instalador del firmware")
-	    os.system("python bin/firmware/G_firmware.py")
+	    os.system("python bin/firmware/G_firmware.py &")
 
 
 	    
@@ -117,7 +126,7 @@ class App:
 
 #------------------------------ FUNCION ANALISIS DE DATOS Y GRAFICA  -------------------------------------
         def i_Estad():
-	    os.system("python bin/estadistica.py")            
+	    os.system("python bin/estadistica.py &")            
 	    time.sleep(3)
 	    Fr = np.loadtxt('importantes/frecuencia.dat')	
     	    L = np.loadtxt('importantes/longitud.dat')	
@@ -142,7 +151,7 @@ class App:
 	imgPendulo=PhotoImage(file="Imagenes/pendulo.gif")
         btnPendulo= Label(bicho, image=imgPendulo,  height=146, width =108).place(x=430, y=460+yn)
         lblFisinfor = Label(bicho, text=" Pendulo Simple ", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=430, y=610+yn)
-        lblFisinfor = Label(bicho, text=" GRUPO DE FISICA E INFOMATICA ", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=360, y=371+yn)
+        lblFisinfor = Label(bicho, text=" GRUPO DE FISICA E INFORMATICA ", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=360, y=371+yn)
 	lblInfo = Label(bicho, text="Dr. Julian Andres Salamanca \n Diego Alberto Parra Garzón", fg = ("black"), bg = ("white"), font = ("Century Schoolbook L",10)).place(x=400, y=390+yn)
 
 
