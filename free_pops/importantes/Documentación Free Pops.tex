@@ -1,0 +1,74 @@
+
+%\documentclass[12pt,twocolumn]{article}
+\documentclass[12pt]{article}
+\usepackage[spanish,english]{babel}
+%\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{multicol,caption}
+\usepackage{amsthm} % Theorem Formatting
+\usepackage{amssymb}    % Math symbols such as \mathbb
+\usepackage{color}
+
+\usepackage{hyperref}
+\usepackage[none]{hyphenat} 
+
+%\renewcommand{\tablename}{Tabla}
+%\def\tablename{Cuadro}% por \def\tablename{Tabla}% 
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+\addto\captionsspanish{%
+  \def\tablename{Tabla}%
+}
+
+\topmargin  = 10pt
+\oddsidemargin  = -0.5in
+%\headheight = 12pt
+%\headsep    = 15pt
+%\footskip   = 15pt
+\textheight = 21.5 cm
+\textwidth  = 18.5cm
+
+\tolerance=10000
+
+\title{\bf{Experimento demostrativo del periodo de oscilación del péndulo simple, para el aula de clase}}
+\author{Julian Salamanca\footnote{jasalamanca@udistrital.edu.co}, Diego Parra\footnote{diegoestudianteud1@gmail.com} \\
+  Universidad Distrital, Calle 3 No 26A-40 Bogotá-Colombia\\
+  Grupo Física e Informática ``FISINFOR''
+}
+\date{\today}
+\begin{document}
+%\def\tablename{Cuadro}% por \def\tablename{Tabla}% 
+\renewcommand{\tablename}{Tabla}
+\maketitle
+\vspace{-0.8cm}
+
+\begin{abstract}
+This article provides an educational tool for displaying the oscillation period of the simple pendulum and harmonic movement, an experimental arrangement of an infrared sensor type both sender and receiver, which is operated by a atmega microcontroller 328P-Pu illustrated, sends data through a module HC-06 Bluetooth to a computer with an operating system GNU-Linux family as it is Linux Mint 17 Xfce, which analyzes real-time graphical and we provides important data on the characterization of the system rope – mass, in a controlled infrared radiation and vibrations that can alter our system pendulum swing environment; besides demonstration, the whole project was done with free software and hardware, is an experience that generates classroom projects `` doing physical ''.\\
+
+{\bf{Keywords:}} Pendulum and simple harmonic motion, physics education, free software and hardware..
+\end{abstract}
+\selectlanguage{spanish}
+\begin{abstract}
+
+El presente artículo aporta una herramienta didáctica para la visualización del periodo de oscilación del péndulo  simple y el movimiento armónico,  se ilustra una disposición experimental de un sensor de tipo infrarrojo  tanto emisor como receptor,  el cual es operado por un microcontrolador atmega 328P-Pu, envía datos a través  un modulo bluetooth hc-06 a un ordenador con un sistema operativo de la familia GNU-Linux como lo es Linux Mint 17 xfce, el cual los analiza, gráfica en tiempo real  y nos arroja  datos importantes sobre la caracterización del sistema cuerda – masa, en un ambiente controlado de radiación infrarroja y vibraciones que puedan alterar nuestro sistema de  oscilación del péndulo; además de demostrativo, todo el proyecto fue realizado con software y hardware libre, es una experiencia que permite generar proyectos de aula ``haciendo física''.\\
+
+{\bf{Descriptores:}} Péndulo y movimiento armónico simple, enseñanza de la física, software y hardware libre.
+\end{abstract}
+
+\begin{multicols}{2}
+
+\section{Introducción}
+Los experimentos demostrativos son utilizados en sesiones magistrales de clase para visualizar y obtener una imagen de la experiencia física, con el objetivo primordial hacer participación interactiva con el estudiante\cite{REDISH} en el estudio de los conceptos físicos involucrados. Sin embargo, hay una gran cantidad de conceptos en física que pueden ser ilustrados a través de una simulación o de un arreglo experimental sofisticado. Este artículo presenta una propuesta de experimento para el estudio del periodo de oscilación en un péndulo, el cual busca ser, además de demostrativo, una experiencia que permita generar proyectos de aula ``haciendo física''.
+\section{Configuración experimental}
+El experimento original sobre la ley de distribución de velocidades de Maxwell-Boltzmann para un conjunto de moléculas en un gas ideal fue realizado por R.C. Miller y P. Kusch en 1955. El arreglo experimental esta esquematizado en la Fig. 1 y constaba de un horno con un pequeño orificio de salida para calentar el gas, luego de la salida un colimador y un selector de velocidades, y finalmente, un detector de partículas.
+\end{multicols}
+
+% The bibliography
+\begin{thebibliography}{99}
+\bibitem{REDISH} Redish, Edward F, \emph{Millikan Award Lecture 1998: Building as cience of teaching physics}, Am. J. Phys. 67 (1999).
+\end{thebibliography}
+\end{document}
