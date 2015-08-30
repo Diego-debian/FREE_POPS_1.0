@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.22)  29 AUG 2015 23:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.8.22)  30 AUG 2015 02:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -702,7 +702,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--73
 
  []
 
-<fig/fig1.png, id=42, 187.70125pt x 188.705pt>
+<fig/fig1.png, id=58, 187.70125pt x 188.705pt>
 File: fig/fig1.png Graphic file (type png)
  <use fig/fig1.png>
 Package pdftex.def Info: fig/fig1.png used on input line 75.
@@ -809,7 +809,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--109
 
  []
 
-<fig/esquematrans.png, id=64, 447.271pt x 217.613pt>
+<fig/esquematrans.png, id=80, 447.271pt x 217.613pt>
 File: fig/esquematrans.png Graphic file (type png)
 
 <use fig/esquematrans.png>
@@ -821,7 +821,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 113.
 See the caption package documentation for explanation.
 
-<fig/montajetr5V.png, id=65, 408.727pt x 326.821pt>
+<fig/montajetr5V.png, id=81, 408.727pt x 326.821pt>
 File: fig/montajetr5V.png Graphic file (type png)
  <use fig/montajetr5V.png>
 Package pdftex.def Info: fig/montajetr5V.png used on input line 120.
@@ -877,7 +877,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 131.
 [3 <./fig/esquematrans.png> <./fig/montajetr5V.png>]
-<fig/bluetoothesq.png, id=78, 692.186pt x 564.509pt>
+<fig/bluetoothesq.png, id=94, 692.186pt x 564.509pt>
 File: fig/bluetoothesq.png Graphic file (type png)
 
 <use fig/bluetoothesq.png>
@@ -899,7 +899,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
-<fig/bluetoothmon.png, id=79, 675.323pt x 395.879pt>
+<fig/bluetoothmon.png, id=95, 675.323pt x 395.879pt>
 File: fig/bluetoothmon.png Graphic file (type png)
 
 <use fig/bluetoothmon.png>
@@ -911,7 +911,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 145.
 See the caption package documentation for explanation.
 
-<fig/s_esquema.png, id=80, 650.43pt x 544.0325pt>
+<fig/s_esquema.png, id=96, 650.43pt x 544.0325pt>
 File: fig/s_esquema.png Graphic file (type png)
  <use fig/s_esquema.png>
 Package pdftex.def Info: fig/s_esquema.png used on input line 155.
@@ -947,7 +947,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 160.
 [4 <./fig/bluetoothesq.png> <./fig/bluetoothmon.png>]
-<fig/sensores.png, id=89, 1055.945pt x 421.575pt>
+<fig/sensores.png, id=105, 1055.945pt x 421.575pt>
 File: fig/sensores.png Graphic file (type png)
  <use fig/sensores.png>
 Package pdftex.def Info: fig/sensores.png used on input line 165.
@@ -973,7 +973,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--173
 
  []
 
-<fig/mon0.png, id=90, 544.0325pt x 553.06625pt>
+<fig/mon0.png, id=106, 544.0325pt x 553.06625pt>
 File: fig/mon0.png Graphic file (type png)
  <use fig/mon0.png>
 Package pdftex.def Info: fig/mon0.png used on input line 175.
@@ -984,7 +984,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 176.
 See the caption package documentation for explanation.
 
-<fig/mon1.png, id=91, 849.1725pt x 505.89pt>
+<fig/mon1.png, id=107, 849.1725pt x 505.89pt>
 File: fig/mon1.png Graphic file (type png)
  <use fig/mon1.png>
 Package pdftex.def Info: fig/mon1.png used on input line 183.
@@ -1007,80 +1007,204 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 189.
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--197
+\OT1/cmr/m/n/12 de que sea ^^Sutil, pe-ro SIN NIN-GU-NA
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--197
+
+ []
+
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 190.
+(babel)             in language  on input line 197.
 [5 <./fig/s_esquema.png> <./fig/sensores.png> <./fig/mon0.png> <./fig/mon1.png>
 ]
-Underfull \hbox (badness 2205) in paragraph at lines 196--197
+Overfull \hbox (1.34961pt too wide) in paragraph at lines 199--200
+\OT1/cmr/m/n/12 git clo-ne https://github.com/Diego-debian/F 
+ []
+
+
+Overfull \hbox (1.44157pt too wide) in paragraph at lines 200--201
+\OT1/cmr/m/n/12 sudo pyt-hon FREE[]-POPS[]-1.0/Ins-tall/instala 
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 207.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 207.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 207.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 207.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 207.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 207.
+<fig/micro.png, id=120, 490.83376pt x 353.32pt>
+File: fig/micro.png Graphic file (type png)
+ <use fig/micro.png>
+Package pdftex.def Info: fig/micro.png used on input line 223.
+(pdftex.def)             Requested size: 227.62119pt x 170.71843pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 224.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 6188) in paragraph at lines 224--224
+[]\OT1/cmr/m/n/12 Figura 10: |[]Ventana al ter-mi-nar de car-gar
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 228.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 228.
+[6]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 229.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 229.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 229.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 229.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 229.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 229.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 230.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 230.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 230.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 230.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 230.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 230.
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
+[]\OT1/cmr/m/n/12 Ordenador con Gnu-Linux ins-ta-la-do,
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 241.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 241.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 241.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 241.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 241.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 241.
+
+Underfull \hbox (badness 2205) in paragraph at lines 253--254
 []\OT1/cmr/m/n/12 Serna, E., Jos^^Se Mar-quin^^Sa, F., & Fern^^Sandez, E. GA-LI
 -LEO GA-LI-LEI. FA-CUL-TAD DE
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 199.
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
+(babel)             in language  on input line 256.
+[7 <./fig/micro.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
  (./Documentación Free Pops.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 256.
 Package rerunfilecheck Info: File `"Documentación Free Pops".out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 6DAB2575E2BBDA85D949157C2AD5F1E0;452.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
+(rerunfilecheck)             Checksum: B1D6C28A261AE0ED0BFE6E47FFA4F7E6;741.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 256.
  ) 
 Here is how much of TeX's memory you used:
- 7653 strings out of 493304
- 113449 string characters out of 6139871
- 209790 words of memory out of 5000000
- 10978 multiletter control sequences out of 15000+600000
+ 7671 strings out of 493304
+ 113728 string characters out of 6139871
+ 211908 words of memory out of 5000000
+ 10989 multiletter control sequences out of 15000+600000
  14310 words of font info for 55 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  36i,11n,38p,940b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1093,10 +1217,10 @@ onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmti12.pfb>
-Output written on "Documentación Free Pops.pdf" (6 pages, 2581872 bytes).
+Output written on "Documentación Free Pops.pdf" (7 pages, 2593146 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

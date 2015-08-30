@@ -187,9 +187,66 @@ El led rojo se conecta al pin  9 del microcontrolador, el led verde se conecta a
 \vspace{0.2cm}
 
 \subsubsection{Instalación del software free pops}
+Programa que  ilustra el periodo de oscilación de un péndulo  y calcula la longitud de la cuerda, la frecuencia de oscilación y la frecuencia angular.   Copyright (C) 2015-22-08  Universidad Distrital Francisco Jose, Grupo de física e informática, Dr Julian Andres Salamanca Bernal, Diego Alberto Parra Garzón.
+\\ \\ 
+El programa free pops es software libre; puedes redistribuirlo y / o modificarlo bajo los términos de la Licencia Pública General GNU publicada por la Fundación para el Software Libre; ya sea la versión 3 de la Licencia, o (a su elección) cualquier versión posterior. 
+\\ \\ 
+Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea el Licencia Pública General GNU para más detalles. 
+\\ \\
+Para la instalación de free pops es necesario hacer lo siguiente:
+\begin{enumerate}
+\item[a. ] Abrir una terminal de linux, una vez hecho esto se instala el programa git de la siguiente manera: sudo apt-get install git 
+\item[b. ] Descargar el programa free pops de los repositorios de github escribiendo en la terminal: \\git clone https://github.com/Diego-debian/F\\REE\_POPS\_1.0.git 
+\item[c. ] Una vez descargado free pops, escribir en la terminal:\\sudo python FREE\_POPS\_1.0/Install/instala\\dor.py 
+\item[d. ] Ya abierto el instalador de free pops, pregunta si desea continuar con la instalación escribir 1 y oprimir enter.
+\item[e. ] Se despliega un sub-menu que pregunta si desea instalar o desinstalar free pops escribir 1 y oprimir enter.
+\item[f. ] El programa actualiza el sistema y pregunta si desea instalar las dependencias de free pops, escribir la tecla S y oprimir enter. 
+\end{enumerate}
+Una vez hecho esto ya esta instalado el programa. 
+
+\subsubsection{Primer uso de free pops}
+Para el primer uso de free pops es necesario:
+\begin{enumerate}
+\item[a. ] Abrir el gestor de archivos.
+\item[b. ] Entrar en la carpeta FREE\_POPS\_1.0.
+\item[c. ] Entrar en la carpeta free\_pops.
+\item[d. ] Hacer doble click izquierdo sobre el programa free\_pops y escribir la cable de superusuario.
+\item[e. ] Conectar la tarjeta arduino uno con el microcontrolador atmega328P-PU, a través del cable usb al computador y oprimir el botón firmware, se abre una ventana de dialogo, oprimir el botón ok. 
+\item[f. ] Al abrir la ventana que va a cargar el firmware en el microcontrolador, oprimir el botón continuar, y oprimir el botón ok de la  ventana de dialogo.
+\item[g. ] Una vez se inicia la carga del firmware en el microcontrolador aparece una ventana de color azul donde se muestra el estado de la carga del firmware, ver figura 10, al finalizar se cerrara la ventana.
+\item[h. ] Oprimir el botón salir.
+\item[i. ] Conectar un usb-bluetooth a alguno de los puertos usb del computador y oprimir el botón ON de bluetooth que se encuentra en la parte izquierda del programa, dar ok a la ventana de dialogo.
+\end{enumerate}
+
+\begin{Figure}
+\center
+\includegraphics[width=8.cm, height=6cm]{fig/micro.png}
+\captionof{figure}{Ventana al terminar de cargar correctamente el firmware en el microcontrolador atmega328P-PU.}
+\label{fig:10}
+\end{Figure}
+\vspace{0.2cm}
+  
+\subsection{Montaje de laboratorio}
+\subsubsection{Materiales}
+\begin{enumerate}
+\item[a. ] Tres cuerdas de diferentes longitudes cuyo peso sea despreciable.
+\item[b. ] Una masa que haga tensión sobre la cuerda.
+\item[c. ] Una cinta métrica.
+\item[d. ] Montaje eléctrico de free pops.
+\item[e. ] Ordenador con Gnu-Linux instalado, conectado a una usb-bluetooth y el software de free pops.
+\item[f. ] Un cronometro. 
+\item[g. ] Un transportador. 
+\end{enumerate}
+
+\subsubsection{Montaje}
+
+\begin{enumerate}
+\item[a. ] Uno de los extremos de la cuerda, debe atarse a un eje de giro y el otro a la masa, formando de esta manera un péndulo,  debajo de la masa, debe colocarse el montaje eléctrico de free pops, asegurándose de que los diodos infrarrojos queden a menos de12  centímetros  de la masa.
+\item[b. ] El transportador, se  utilizara para medir desde que ángulo se soltara la masa, para comenzar a oscilar.
+\end{enumerate}
+
+
 \end{multicols}
-
-
 % The bibliography
 \begin{thebibliography}{99}
 \bibitem{REDISH} Redish, Edward F, \emph{Millikan Award Lecture 1998: Building as cience of teaching physics}, Am. J. Phys. 67 (1999).
