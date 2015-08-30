@@ -62,13 +62,138 @@ El presente artículo aporta una herramienta didáctica para la visualización d
 \begin{multicols}{2}
 
 \section{Introducción}
-Los experimentos demostrativos son utilizados en sesiones magistrales de clase para visualizar y obtener una imagen de la experiencia física, con el objetivo primordial hacer participación interactiva con el estudiante\cite{REDISH} en el estudio de los conceptos físicos involucrados. Sin embargo, hay una gran cantidad de conceptos en física que pueden ser ilustrados a través de una simulación o de un arreglo experimental sofisticado. Este artículo presenta una propuesta de experimento para el estudio del periodo de oscilación en un péndulo, el cual busca ser, además de demostrativo, una experiencia que permita generar proyectos de aula ``haciendo física''.
+Los experimentos demostrativos son utilizados en sesiones magistrales de clase para visualizar y obtener una imagen de la experiencia física, cuyo objetivo primordial es, el hacer participación interactiva con el estudiante\cite{REDISH} en el estudio de los conceptos físicos involucrados. Sin embargo, hay una gran cantidad de conceptos en física que pueden ser ilustrados a través de una simulación o de un arreglo experimental sofisticado.\\ \\ Este artículo presenta una propuesta de experimento para el estudio del periodo de oscilación en un péndulo, el cual busca ser, además de demostrativo, una experiencia que permita generar proyectos de aula ``haciendo física''.
+\\ \\
+
 \section{Configuración experimental}
-El experimento original sobre la ley de distribución de velocidades de Maxwell-Boltzmann para un conjunto de moléculas en un gas ideal fue realizado por R.C. Miller y P. Kusch en 1955. El arreglo experimental esta esquematizado en la Fig. 1 y constaba de un horno con un pequeño orificio de salida para calentar el gas, luego de la salida un colimador y un selector de velocidades, y finalmente, un detector de partículas.
+El primer hombre dedicado a la investigación\cite{GALILEO} y realizador de grandes descubrimientos entre ellos la explicación física del péndulo y considerado el primer observador de la ciencia fue el señor Galileo Galilei, el cual dijo acerca de este tópico que sin importar cuál es el espacio de oscilación de un péndulo, siempre tendrá el mismo ritmo. 
+\\ \\
+El arreglo experimental esta esquematizado en la Fig. 1 y constaba de una cuerda atada a un apoyo, una masa sujeta a la cuerda, y como en aquel tiempo los relojes eran muy escasos, el señor Galilei\cite{GALILEO} utilizo los pulsos que generaba los latidos de su corazón para medir el tiempo.
+\\\\
+\begin{Figure}
+\center
+\includegraphics[width=4.0cm, height=5cm] {fig/fig1.png}
+\captionof{figure}{Esquema ``Figura realizada en python-visual'' de la configuración experimental utilizada por el señor Galileo Galilei para medir el periodo de oscilación de un péndulo y su isocronismo.}
+\label{fig:g1}
+\end{Figure}
+
+\subsection{Elaboración del instrumento de medición}
+
+\subsubsection{Materiales}
+Para la realización de este montaje se debe utilizar los siguientes componentes:
+\begin{enumerate}
+\item[a.] Un ordenador con sistema operativo GNU-Linux.
+\item[b.] Microcontrolador atmega 328P-PU\footnote{ Arduino, pagina oficial, proyecto arduino. http://www.arduino.cc/} para realizar la parte de control del hardware.
+\item[c.] Un diodo led infrarrojo receptor y emisor\footnote{ Infrared data sheet.  http://www.datasheetarchive.com/dlmain/Datasheets-31/DSA-617614.pdf}
+\item[d.] Modulo bluetooth HC-06 para arduino, el cual permite la comunicación a distancia con el dispositivo, sin necesidad de un sistema físico cableado.
+\item[e.] Transistor LM-7805CV\footnote{ Data sheet transistor LM-7805CV. http://pdf.datasheetcatalog.net/datasheet/fairchild/LM7805.pdf}, transformador de voltaje de 9 voltios a 5 voltios el cual alimenta el microcontrolador atmega328P-PU, y los demás dispositivos del proyecto.
+\item[f.] Un cristal de 16 MHz.
+\item[g.] Tarjeta arduino uno\footnote{ Arduino, pagina oficial, proyecto arduino. http://www.arduino.cc/}.
+\item[h.] Tres resistencias de 500 ohms.
+\item[i.] Una resistencia de 1 komhs.
+\item[j.] Dos capacitores cerámicos de 12 picofaradios.
+\item[k.] Dos capacitores de 10 microfaradios.
+\item[l.] Una batería de 9 V.
+\item[m.] Un pulsador pequeño.
+\item[n.] Tres led de colores de 4mm. 
+\end{enumerate}
+
+\subsubsection{Montaje del hardware}
+A continuación se explica paso a paso como armar el circuito eléctrico, el montaje se realiza en fritzing\footnote{Enlace a la pagina oficial del proyecto fritzing http://www.fritzing.org/home/}. Se explicara parte por parte del circuito y luego todas deben unirse en una sola.
+\\ \\
+Cabe mencionar que los esquemas de las figuras de la 1 a la 8 fueron tomadas de la pagina principal del proyecto arduino, y modificadas en fritzing; lo primero es preparar el microcontrolador para su primer uso, debido a que los microcontroladores atmega 328 P-PU no vienen listos para comenzar a programar; es necesario hacer un stand alone\footnote{Bootloader arduino https://arduinoelectronics.wordpress.com/2012/02/10/standalone-atmega-without-arduino-bootloader/} sobre el microcontrolador.
+\\ \\ 
+Se realiza el montaje del transformador de 9 voltios a 5 voltios, el cual se aprecia en la Fig. 2 y en la Fig. 3, esto se hace con dos capacitores electrolíticos de 10 microfaradios  y el transistor lm-7805cv\footnote{ Ver datasheet del transistor.}.
+\\ \\
+Ambos  capacitores deben ir en paralelo quedando su extremo negativo conectado a tierra y su extremo positivo uno a la entrada de 9 V y el otro a la salida de 5 V del transistor lm-7805cv, el transistor lm-7805cv consta de 3 pines uno de los cuales es la entrada de +9V, el pin de la mitad es tierra o GND y el pin extremo es la salida a 5V; tal como se muestra en la figura 2; en la figura 3, se le coloco un enchufe de salida de poder.
+
+\begin{Figure}
+\center
+\includegraphics[width=7cm, height=5cm]{fig/esquematrans.png} 
+\captionof{figure}{Esquema eléctrico de un transformador de 9V a 5V, utilizando un transistor lm 7805 cv. Los capacitores son electrolíticos de 10 microfaradios.}
+\label{fig:g2}
+\end{Figure}
+\vspace{0.2cm}
+
+\begin{Figure}
+\center
+\includegraphics[width=7.cm, height=6cm]{fig/montajetr5V.png}
+\captionof{figure}{Montaje en protoboard del circuito regulador de la figura 2.}
+\label{fig:g3}
+\end{Figure}
+\vspace{0.2cm}
+
+
+El cristal oscilador de 16 mHz debe ir siempre conectado en el microcontrolador, esto  con el fin de ajustar los tres relojes internos que trae el integrado atmega 328 P-Pu, para esto se utiliza el cristal de 16 mHz junto con los dos condensadores cerámicos de 12 picofaradios, Fig. 4 y Fig. 5,  uno de los pines del cristal debe conectarse al pin 9 del microcontrolador y el otro extremo del cristal al pin 10; conectar un capacitor a cada extremo del cristal y los extremos de los capacitores a tierra, de tal forma que los capacitores quedan en paralelo. 
+\\ \\
+El botón es para reiniciar el microcontrolador en caso de necesitarlo, Fig. 4 y Fig. 5, colocando uno de los extremos del botón, al pin 1 del microcontrolador que es el pin de reset, el otro extremo del botón a una resistencia de 1 Komhs y el extremo de la resistencia a tierra.
+\\ \\
+
+\begin{Figure}
+\center
+\includegraphics[width=8cm, height=9cm]{fig/bluetoothesq.png} 
+\captionof{figure}{Circuito eléctrico modulo bluetooth, conectado a un microcontrolador atmega 328 P-PU junto con un cristal, dos capacitores cerámicos, un botón de reset y una resistencia de 1 Komhs.}
+\label{fig:g4}
+\end{Figure}
+\vspace{1.4 cm}
+
+El modulo bluetooth se debe conectar de la siguiente manera: el pin 2 de la tarjeta arduino es el Rx este va conectado al Tx del blueetooth, el pin 3 del microcontrolador es el Tx y va conectado al pin Rx del bluetooth, Fig. 4 y Fig. 5, el pin GND del bluetooth debe ir a tierra, ahora el pin de Vcc del bluetooth se conecta 5V. 
+\\ \\
+\begin{Figure}
+\center
+\includegraphics[width=7.cm, height=7cm]{fig/bluetoothmon.png}
+\captionof{figure}{Montaje en protoboard del circuito regulador de la figura 4,  los cables negros son tierra, los cables rojos son voltaje, y los cables amarillos son conexiones.}
+\label{fig:g5}
+\end{Figure}
+\vspace{0.2cm}
+
+La parte negativa del diodo  emisor infrarrojo se conecta a un extremo de una resistencia de 500 ohms y el extremo de la resistencia a tierra, figura 6 y 7 ; la parte positiva del diodo emisor se conecta al pin 4 del microcontrolador atmega328, que es la salida digital No. 2. Ahora se conecta la parte positiva del diodo infrarrojo receptor a una resistencia de 1 Komhs y el otro extremo de la resistencia a tierra, se conecta el pin de tierra del diodo receptor infrarrojo a +5V, el pin 28 del microcontrolador conecta a la parte positiva del diodo infrarrojo. 
+
+
+\begin{Figure}
+\center
+\includegraphics[width=7.cm, height=8cm]{fig/s_esquema.png}
+\captionof{figure}{Conexiones de los sensores a la tarjeta micro-controladora atmega328, el diodo receptor infrarrojo es el que se encuentra en la parte izquierda de la figura. El diodo emisor infrarrojo es el que se encuentra en la parte derecha de la figura conectado a tierra a tráves de una resistencia, y, al pin 4 de su otro extremo con el microcontrolador.}
+\label{fig:g6}
+\end{Figure}
+\vspace{0.2cm}
+
+
+
+\begin{Figure}
+\center
+\includegraphics[width=7.cm, height=5cm]{fig/sensores.png}
+\captionof{figure}{Montaje en protoboard del circuito los sensores de la figura 6,  los cables negros son tierra, los cables rojos son voltaje, y los cables amarillos son conexiones.}
+\label{fig:7}
+\end{Figure}
+\vspace{2cm}
+
+El led rojo se conecta al pin  9 del microcontrolador, el led verde se conecta al pin 11, el led azul se conecta al pin 10, este montaje con el fin de identificar que proceso se esta realizando en el microcontrolador. Ahora se conectan todos los circuitos anteriormente descritos, en un solo circuito con la baquela para conexiones. figura 8 y 9.  
+\\ \\
+\begin{Figure}
+\center
+\includegraphics[width=7.cm, height=5cm]{fig/mon0.png}
+\captionof{figure}{Montaje en baquela, en la parte superior los diodos tanto emisor como receptor, se colocaron elevados para que la oscilación del péndulo no golpee con ningún componente del montaje.}
+\label{fig:8}
+\end{Figure}
+\vspace{0.2cm}
+
+\begin{Figure}
+\center
+\includegraphics[width=7.cm, height=5cm]{fig/mon1.png}
+\captionof{figure}{Montaje final del dispositivo, en la parte derecha superior se coloca un soporte de silicona para los diodos infrarrojos, esto da estabilidad y firmeza, se enrolla con cinta aislante para evitar ruido por radiaciones no deseadas que lleguen transversalmente.}
+\label{fig:9}
+\end{Figure}
+\vspace{0.2cm}
+
+\subsubsection{Instalación del software free pops}
 \end{multicols}
+
 
 % The bibliography
 \begin{thebibliography}{99}
 \bibitem{REDISH} Redish, Edward F, \emph{Millikan Award Lecture 1998: Building as cience of teaching physics}, Am. J. Phys. 67 (1999).
+\bibitem{GALILEO} Serna, E., José Marquiná, F., \& Fernández, E. GALILEO GALILEI. FACULTAD DE INGENIERÍAS, FUNDACION UNIVERSITARIA LUIS AMIGO.
+
 \end{thebibliography}
 \end{document}
