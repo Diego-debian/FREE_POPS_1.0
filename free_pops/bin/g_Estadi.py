@@ -47,7 +47,7 @@ class g_Estadi:
         print "\n\n                     ANALISIS PENDULO SIMPLE           \n \n"
         print  "| frecuencia [Hz] |    F. ángular [rad/s]  |   Longitud [m]   |   Periodo [s] |" 
         print  "|=================|========================|==================|===============|" 
-        print  "|",self.Fr," |     ",self.W,"    | ",self.L,"  |",self.T ,"|" 
+        print  "|",self.Fr     ," |     ",self.W     ,"    | ",self.L     ,"  |",self.T     ,"|" 
         print  "|=================|========================|==================|===============|" 
         
         print self.n_D

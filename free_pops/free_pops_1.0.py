@@ -80,10 +80,6 @@ class App:
             btnDetener= Button(bicho, text= "Detener", width=5, height=1, command= Boton).place(x=20+x1, y=350)
             btnLimpiar = Button(bicho, text= "limpiar", width=5, height=1, command= Reset).place(x=20+x1, y=380) 	
 
-       
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Crear carpeta de los datos segun su fecha y hora @@@@@@@@@@@@@@@@@@@@@
-        def Carpetas():
-	    os.system("python prueba.py &")
 
 #------------------------------------- Funcion limpiar pantalla ---------------------------------------------------
         def Reset():
@@ -133,9 +129,6 @@ class App:
 	    os.system("python bin/firmware/G_firmware.py &")
 
 
-	    
-
-
 #------------------------------ FUNCION ANALISIS DE DATOS Y GRAFICA  -------------------------------------
         def i_Estad():
 	    os.system("python bin/estadistica.py &")            
@@ -156,6 +149,7 @@ class App:
     	    lblLongitud = Label(bicho, text= L,  fg = ("black"),  bg = ("white"), font = ("Century Schoolbook L",10)).place(x=550 + r , y=290 + s)
    	    lblPeriodo = Label(bicho, text= T ,  fg = ("black"),  bg = ("white"), font = ("Century Schoolbook L",10)).place(x=550 + r , y=330 + s)
 	 
+
 #---------------------- Botones Presentacion -----------------------------------------------------------    	
 	yn = int(-210)
 	imgBoton2=PhotoImage(file="Imagenes/cap8.gif")
@@ -173,6 +167,7 @@ class App:
         btnConectar= Button(bicho, text= " ON ", width=5, height=1, command= Verifica).place(x=20, y=350-y1)            
         btnDesconectar= Button(bicho, text= " OFF ", width=5, height=1, command= Bl_off).place(x=20, y=380-y1)  
 	btnSalir=Button(bicho, text = "Salir", command=Salir, height=1, width =5).place(x=20, y=410-y1)
+
 
 #---------------------- Botones firmware -----------------------------------
 	btnfirmware=Button(bicho, text = "Firmware", command=Firmware, height=1, width =5).place(x=340, y=380)
