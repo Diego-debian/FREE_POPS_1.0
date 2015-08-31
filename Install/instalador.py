@@ -20,7 +20,7 @@ class Instalador:
     def Presentacion(self):
 	os.system("clear")
 	print "\t\t  Instalador de FREE_POPS_1.0"    
-	print "\n \n \n Bienvenido al software free_pops_1.0, el cual le permitira tener varias horas\n de diversión, entre otras cosas podra crear un circuito que le permitira medir el periodo de oscilación de un pendulo simple, a demas, disfrutara de una interfaz fluida y amigable al usuario. "
+	print "\n \n \n Bienvenido al software free_pops_1.0, el cual le permitira tener varias horas\n de diversión, entre otras cosas podra crear un circuito que le permitira medir\n el periodo de oscilación de un pendulo simple, a demas, disfrutara de una\n interfaz amigable al usuario. "
 	print "\n DESEA CONTINUAR CON LA INSTALACION: \n\t Oprima 1 para si \n\t Oprima 2 para no"
 	Pr1 = int(raw_input("Ingrese su respuesta: "))
 	if Pr1 == 1:

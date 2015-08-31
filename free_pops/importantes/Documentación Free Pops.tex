@@ -164,7 +164,7 @@ La parte negativa del diodo  emisor infrarrojo se conecta a un extremo de una re
 \center
 \includegraphics[width=7.cm, height=5cm]{fig/sensores.png}
 \captionof{figure}{Montaje en protoboard del circuito los sensores de la figura 6,  los cables negros son tierra, los cables rojos son voltaje, y los cables amarillos son conexiones.}
-\label{fig:7}
+\label{fig:g7}
 \end{Figure}
 \vspace{2cm}
 
@@ -174,7 +174,7 @@ El led rojo se conecta al pin  9 del microcontrolador, el led verde se conecta a
 \center
 \includegraphics[width=7.cm, height=5cm]{fig/mon0.png}
 \captionof{figure}{Montaje en baquela, en la parte superior los diodos tanto emisor como receptor, se colocaron elevados para que la oscilación del péndulo no golpee con ningún componente del montaje.}
-\label{fig:8}
+\label{fig:g8}
 \end{Figure}
 \vspace{0.2cm}
 
@@ -182,7 +182,7 @@ El led rojo se conecta al pin  9 del microcontrolador, el led verde se conecta a
 \center
 \includegraphics[width=7.cm, height=5cm]{fig/mon1.png}
 \captionof{figure}{Montaje final del dispositivo, en la parte derecha superior se coloca un soporte de silicona para los diodos infrarrojos, esto da estabilidad y firmeza, se enrolla con cinta aislante para evitar ruido por radiaciones no deseadas que lleguen transversalmente.}
-\label{fig:9}
+\label{fig:g9}
 \end{Figure}
 \vspace{0.2cm}
 
@@ -191,18 +191,26 @@ Programa que  ilustra el periodo de oscilación de un péndulo  y calcula la lon
 \\ \\ 
 El programa free pops es software libre; puedes redistribuirlo y / o modificarlo bajo los términos de la Licencia Pública General GNU publicada por la Fundación para el Software Libre; ya sea la versión 3 de la Licencia, o (a su elección) cualquier versión posterior. 
 \\ \\ 
-Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea el Licencia Pública General GNU para más detalles. 
+Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea la Licencia Pública General GNU para más detalles. 
 \\ \\
 Para la instalación de free pops es necesario hacer lo siguiente:
 \begin{enumerate}
 \item[a. ] Abrir una terminal de linux, una vez hecho esto se instala el programa git de la siguiente manera: sudo apt-get install git 
 \item[b. ] Descargar el programa free pops de los repositorios de github escribiendo en la terminal: \\git clone https://github.com/Diego-debian/F\\REE\_POPS\_1.0.git 
 \item[c. ] Una vez descargado free pops, escribir en la terminal:\\sudo python FREE\_POPS\_1.0/Install/instala\\dor.py 
-\item[d. ] Ya abierto el instalador de free pops, pregunta si desea continuar con la instalación escribir 1 y oprimir enter.
-\item[e. ] Se despliega un sub-menu que pregunta si desea instalar o desinstalar free pops escribir 1 y oprimir enter.
+\item[d. ] Ya abierto el instalador de free pops, pregunta si desea continuar con la instalación, escribir 1 y oprimir enter.
+\item[e. ] Se despliega un sub-menu que pregunta si desea instalar o desinstalar free pops, escribir 1 y oprimir enter.
 \item[f. ] El programa actualiza el sistema y pregunta si desea instalar las dependencias de free pops, escribir la tecla S y oprimir enter. 
 \end{enumerate}
 Una vez hecho esto ya esta instalado el programa. 
+\\ \\
+\begin{Figure}
+\center
+\includegraphics[width=8.cm, height=6cm]{fig/Docu1.png}
+\captionof{figure}{Ventana de inicio del software free pops.}
+\label{fig:g10}
+\end{Figure}
+\vspace{0.2cm}
 
 \subsubsection{Primer uso de free pops}
 Para el primer uso de free pops es necesario:
@@ -211,18 +219,20 @@ Para el primer uso de free pops es necesario:
 \item[b. ] Entrar en la carpeta FREE\_POPS\_1.0.
 \item[c. ] Entrar en la carpeta free\_pops.
 \item[d. ] Hacer doble click izquierdo sobre el programa free\_pops y escribir la cable de superusuario.
-\item[e. ] Conectar la tarjeta arduino uno con el microcontrolador atmega328P-PU, a través del cable usb al computador y oprimir el botón firmware, se abre una ventana de dialogo, oprimir el botón ok. 
+\item[e. ] Conectar\footnote{ Ver figura 10.} la tarjeta arduino uno con el microcontrolador atmega328P-PU, a través del cable usb al computador y oprimir el botón firmware, se abre una ventana de dialogo, oprimir el botón ok. 
 \item[f. ] Al abrir la ventana que va a cargar el firmware en el microcontrolador, oprimir el botón continuar, y oprimir el botón ok de la  ventana de dialogo.
-\item[g. ] Una vez se inicia la carga del firmware en el microcontrolador aparece una ventana de color azul donde se muestra el estado de la carga del firmware, ver figura 10, al finalizar se cerrara la ventana.
+\item[g. ] Una vez se inicia la carga del firmware en el microcontrolador aparece una ventana de color azul donde se muestra el estado de la carga del firmware\footnote{ Ver figura 11}, al finalizar se cerrara la ventana.
 \item[h. ] Oprimir el botón salir.
 \item[i. ] Conectar un usb-bluetooth a alguno de los puertos usb del computador y oprimir el botón ON de bluetooth que se encuentra en la parte izquierda del programa, dar ok a la ventana de dialogo.
 \end{enumerate}
+\vspace{0.2cm}
+
 
 \begin{Figure}
 \center
 \includegraphics[width=8.cm, height=6cm]{fig/micro.png}
 \captionof{figure}{Ventana al terminar de cargar correctamente el firmware en el microcontrolador atmega328P-PU.}
-\label{fig:10}
+\label{fig:g11}
 \end{Figure}
 \vspace{0.2cm}
   
@@ -241,9 +251,51 @@ Para el primer uso de free pops es necesario:
 \subsubsection{Montaje}
 
 \begin{enumerate}
-\item[a. ] Uno de los extremos de la cuerda, debe atarse a un eje de giro y el otro a la masa, formando de esta manera un péndulo,  debajo de la masa, debe colocarse el montaje eléctrico de free pops, asegurándose de que los diodos infrarrojos queden a menos de12  centímetros  de la masa.
-\item[b. ] El transportador, se  utilizara para medir desde que ángulo se soltara la masa, para comenzar a oscilar.
+\item[a. ] Uno de los extremos de la cuerda, debe atarse a un eje de giro y el otro a la masa, formando de esta manera un péndulo,  debajo de la masa, debe colocarse el montaje eléctrico de free pops, asegurándose de que los diodos infrarrojos queden a menos de 12  centímetros  de la masa, figura 12.A y 12.B.
+\item[b. ] El transportador, se  utiliza para medir el ángulo del que se suelta la masa, para que el péndedulo comience a oscilar.
 \end{enumerate}
+
+\begin{Figure}	
+\center
+\begin{tabular}{|l|r|}
+\hline
+\includegraphics[width=4cm, height=8cm]{fig/m_1.png} & \includegraphics[width=4cm, height=8cm]{fig/m_2.png} \\ \hline
+12.A & 12.B \\ \hline
+\end{tabular}
+\captionof{figure}{En la figura 12.A se muestra el montaje experimental de un péndulo y el montaje eléctrico de free pops debajo de este. La figura 12.B es una vista ampliada de la figura 12.A.}
+\label{fig:g12}
+\end{Figure}
+\vspace{0.6 cm}
+
+\section{Experiencia de laboratorio}
+Una vez hechos los pasos de la configuración experimental, se procede con el laboratorio como tal, para medir el periodo de oscilación del péndulo; para esto tenemos listo nuestro software free pops, con el bluetooth y todo ya preparado para funcionar; se saca la masa del péndulo de su reposo a un ángulo menor a 15 grados, y se suelta; paso seguido oprimimos el botón comenzar de nuestro software free pops, e inmediatamente el programa empezara a recibir datos del montaje, graficando en tiempo real, figura 13 y 14.
+\\ \\
+Una vez terminado de capturar los datos del sistema oscilante,  se debe medir la longitud de la cuerda que participo en la oscilación y también es necesario que una persona cuente las oscilaciones del péndulo, durante 30 segundos; otra persona le puede indicar cuando pasen 30 segundos, para que detenga su cuenta.
+\\ \\
+De esta manera se puede comparar la frecuencia de oscilación  que arroja el software de free pops con la frecuencia de oscilación que tiene el péndulo.
+
+\vspace{0.6 cm}
+\begin{Figure}
+\center
+\includegraphics[width=8.cm, height=6cm]{fig/graf2.png}
+\captionof{figure}{Oprimir el botón comenzar del software free pops.}
+\label{fig:g13}
+\end{Figure}
+\vspace{0.2cm}
+
+
+
+\begin{Figure}
+\center
+\includegraphics[width=8.cm, height=6cm]{fig/graf1.png}
+\captionof{figure}{Free pops captura  y grafica los datos en  tiempo real.}
+\label{fig:g14}
+\end{Figure}
+\vspace{0.2cm}
+
+\section{Analisis de resultados}
+Oprimir el botón analizar que se encuentra abajo de la parte del menú analizar datos, una vez termina de analizar los datos, aparecen los resultados en la ventana principal de free pops, en donde se incluye frecuencia angular, frecuencia, longitud de la cuerda y el periodo de oscilación pendular.
+
 
 
 \end{multicols}
@@ -251,6 +303,8 @@ Para el primer uso de free pops es necesario:
 \begin{thebibliography}{99}
 \bibitem{REDISH} Redish, Edward F, \emph{Millikan Award Lecture 1998: Building as cience of teaching physics}, Am. J. Phys. 67 (1999).
 \bibitem{GALILEO} Serna, E., José Marquiná, F., \& Fernández, E. GALILEO GALILEI. FACULTAD DE INGENIERÍAS, FUNDACION UNIVERSITARIA LUIS AMIGO.
+\bibitem{VISUAL} García, C. P. (2008). Proyecto Physthones. Simulaciones Físicas en Visual Python (0.1). Un libro libre de Alqua.
+\bibitem{MICROCONTROLADOR} Muñoz, N. D., Andrade, C. A., \& Londoño Ospina, N. (2011). Diseño y construcción de un robot móvil orientado a la enseñanza e investigación. Revista Científica Ingeniería y Desarrollo, 19(19), 114-127.
 
 \end{thebibliography}
 \end{document}

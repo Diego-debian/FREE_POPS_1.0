@@ -128,6 +128,11 @@ class App:
 	    tkMessageBox.showinfo("free_pops_1.0", message= "Conecte la tarjeta microcontroladora arduino uno, con un microcontrolador listo para su uso.\n\nProcediendo con el instalador del firmware")
 	    os.system("python bin/firmware/G_firmware.py &")
 
+#--------------------------------Definiendo función Documentación---------------------------------------
+	def Documentacion():
+            tkMessageBox.showinfo("free_pops_1.0", message= "! Abriendo documentación, tenga pasciencia ¡")
+	    os.system("evince 'importantes/Documentación Free Pops.pdf' &")
+
 
 #------------------------------ FUNCION ANALISIS DE DATOS Y GRAFICA  -------------------------------------
         def i_Estad():
@@ -171,6 +176,7 @@ class App:
 
 #---------------------- Botones firmware -----------------------------------
 	btnfirmware=Button(bicho, text = "Firmware", command=Firmware, height=1, width =5).place(x=340, y=380)
+	btnDocumentacion=Button(bicho, text = "Ayuda", command=Documentacion, height=1, width =5).place(x=340, y=350)
         bicho.mainloop()  
 
    

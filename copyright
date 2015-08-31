@@ -1,21 +1,19 @@
-Programa para ilustar el periodo de oscilación de un péndulo simple y calcular la longitud de la cuerda.
+		
 
+		Programa que  ilustra el periodo de oscilación de un péndulo  y calcula la longitud de la cuerda,
+		la frecuencia de oscilación y la frecuencia angular.   
 
-    Copyright (C) {2015-22-08}  {Diego Alberto Parra Garzón}
+		Copyright (C) 2015-22-08  Universidad Distrital Francisco Jose, Grupo de física e informática, 
+					  Dr Julian Andres Salamanca Bernal, Diego Alberto Parra Garzón .
 
-    Free pops program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 3 of the License, or
-    (at your option) any later version.
+		El programa free pops es software libre; puedes redistribuirlo y / o modificarlo bajo los términos 
+		de la Licencia Pública General GNU publicada por la Fundación para el Software Libre; ya sea la 
+		versión 3 de la Licencia, o (a su elección) cualquier versión posterior. 
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+		Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; ni siquiera
+		la garantía implícita de COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea el Licencia
+		Pública General GNU para más detalles. 
 
-    You should have received a copy of the GNU General Public License along
-    with this program; if not, write to the Free Software Foundation, Inc.,
-    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
-                
+		Debería haber recibido una copia de la Licencia Pública General de GNU junto con este programa; si no,
+		escriba a la Free Software Foundation, Inc., 51 Franklin Street, Quinto Piso, Boston, MA 02110-1301 EE.UU..
 
