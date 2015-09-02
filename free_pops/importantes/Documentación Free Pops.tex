@@ -41,6 +41,8 @@
 }
 \date{\today}
 \begin{document}
+
+
 %\def\tablename{Cuadro}% por \def\tablename{Tabla}% 
 \renewcommand{\tablename}{Tabla}
 \maketitle
@@ -58,6 +60,24 @@ El presente artículo aporta una herramienta didáctica para la visualización d
 
 {\bf{Descriptores:}} Péndulo y movimiento armónico simple, enseñanza de la física, software y hardware libre.
 \end{abstract}
+
+%tabla de contenido sin numeracion
+\renewcommand\contentsname{\centering TABLA DE CONTENIDO}
+\thispagestyle{empty}
+\setcounter{page}{1}
+\tableofcontents
+\clearpage
+
+%lista de figuras
+\renewcommand\listfigurename{\centering LISTA DE FIGURAS}
+\listoffigures
+\clearpage
+
+%lista de tablas
+% \renewcommand\listtablename{\centering LISTA DE TABLAS}
+% \listoftables
+% \clearpage
+
 
 \begin{multicols}{2}
 
@@ -268,43 +288,105 @@ Para el primer uso de free pops es necesario:
 \vspace{0.6 cm}
 
 \section{Experiencia de laboratorio}
-Una vez hechos los pasos de la configuración experimental, se procede con el laboratorio como tal, para medir el periodo de oscilación del péndulo; para esto tenemos listo nuestro software free pops, con el bluetooth y todo ya preparado para funcionar; se saca la masa del péndulo de su reposo a un ángulo menor a 15 grados, y se suelta; paso seguido oprimimos el botón comenzar de nuestro software free pops, e inmediatamente el programa empezara a recibir datos del montaje, graficando en tiempo real, figura 13 y 14.
+Una vez hechos los pasos de la configuración experimental, se procede con el laboratorio como tal, para medir el periodo de oscilación del péndulo; para esto tenemos listo nuestro software free pops, con el bluetooth y todo ya preparado para funcionar; se saca la masa del péndulo de su reposo a un ángulo menor a 15 grados, y se suelta; paso seguido oprimimos el botón comenzar de nuestro software free pops, e inmediatamente el programa empezara a recibir datos del montaje, graficando en tiempo real, figura 13.
+\\ \\ \\ \\
+Una vez terminado de capturar los datos del sistema oscilante,  se debe medir la longitud de la cuerda que participo en la oscilación y también es necesario que una persona cuente las oscilaciones del péndulo, durante 30 segundos; otra persona le puede indicar cuando pasen 30 segundos, para que detenga su cuenta. de esta manera se puede comparar la frecuencia de oscilación  que arroja el software de free pops con la frecuencia de oscilación que tiene el péndulo.
 \\ \\
-Una vez terminado de capturar los datos del sistema oscilante,  se debe medir la longitud de la cuerda que participo en la oscilación y también es necesario que una persona cuente las oscilaciones del péndulo, durante 30 segundos; otra persona le puede indicar cuando pasen 30 segundos, para que detenga su cuenta.
-\\ \\
-De esta manera se puede comparar la frecuencia de oscilación  que arroja el software de free pops con la frecuencia de oscilación que tiene el péndulo.
 
-\vspace{0.6 cm}
+
 \begin{Figure}
 \center
-\includegraphics[width=8.cm, height=6cm]{fig/graf2.png}
-\captionof{figure}{Oprimir el botón comenzar del software free pops.}
+\includegraphics[width=9.cm, height=8cm]{fig/graf1.png}
+\captionof{figure}{Free pops captura  y grafica los datos en  tiempo real al oprimir el botón comenzar.}
 \label{fig:g13}
 \end{Figure}
 \vspace{0.2cm}
 
+\section{Analisis de resultados}
+Oprimir el botón analizar que se encuentra bajo el menú analizar datos, Lo que inmediatamente hará el programa, es ir al archivo donde se capturaron los datos y empezara hallar las pendientes de estos, una vez obtenidas las pendientes lo que hará sera contar las oscilaciones que dio el péndulo,  y con las ecuaciones\cite{GIANCOLI} del movimiento armónico simple se obtiene  la frecuencia\ref{eqn:frecuencia}  de oscilación del péndulo\footnote{ Ecuación 1, f es la frecuencia, N es el numero de oscilaciones y t es el tiempo en el que dio las oscilaciones el péndulo.},ecuación 1; el periodo\ref{eqn:periodo} de oscilación\footnote{Ecuación 2, T es el periodo de oscilación, f es la frecuencia.}, ecuación 2; la frecuencia\ref{eqn:frecueniangular} angular\footnote{ Ecuación 3, $\omega^2$ es la frecuencia angular al cuadrado, $\pi $ es 3.141592, f es la frecuencia.}, ecuación 3; la longitud\ref{eqn:longitud} de la cuerda \footnote{ Ecuación 4, g es la aceleración gravitacional que tiene un valor de 9.81 $\frac{m}{s^2}$, $\omega^2$ es la frecuencia angular al cuadrado.}, ecuación 4; una vez termina de analizar los datos, aparecen los resultados en la ventana principal de free pops.
 
+
+\begin{equation}
+\label{eqn:frecuencia}
+f = \frac{N}{t}
+\end{equation}
+
+\begin{equation}
+\label{eqn:periodo}
+T = \frac{1}{f}
+\end{equation}
+
+\begin{equation}
+\label{eqn:frecueniangular}
+\omega = 2 * \pi * f
+\end{equation}
+
+\begin{equation}
+\label{eqn:longitud}
+ l = \frac{g}{\omega^2}  
+\end{equation}
 
 \begin{Figure}
 \center
-\includegraphics[width=8.cm, height=6cm]{fig/graf1.png}
-\captionof{figure}{Free pops captura  y grafica los datos en  tiempo real.}
+\includegraphics[width=9.cm, height=5cm]{fig/analis1.png}
+\captionof{figure}{Análisis de resultados del software free pops, con una masa de 50 gramos, la longitud de la cuerda es 34 cm, y el ángulo del que empieza a oscilar es de 10 grados;   el error en la medida del software es de 2.64\%; se obtuvo el mismo resultado con una masa de 20 gramos.}
 \label{fig:g14}
 \end{Figure}
 \vspace{0.2cm}
 
-\section{Analisis de resultados}
-Oprimir el botón analizar que se encuentra abajo de la parte del menú analizar datos, una vez termina de analizar los datos, aparecen los resultados en la ventana principal de free pops, en donde se incluye frecuencia angular, frecuencia, longitud de la cuerda y el periodo de oscilación pendular.
+\begin{Figure}
+\center
+\includegraphics[width=9.cm, height=5cm]{fig/analis2.png}
+\captionof{figure}{Análisis de resultados del software free pops, con una masa de 50 gramos, la longitud de la cuerda es 39 cm, y el ángulo del que empieza a oscilar es de 10 grados;   el error en la medida del software es de 0,5\%; se obtuvo el mismo resultado con una masa de 20 gramos.}
+\label{fig:g15}
+\end{Figure}
+\vspace{0.2cm}
 
+Abajo del botón analizar, hay un botón que dice graficar, al oprimirlo, el programa muestra tres gráficas, fig. 16 y 17; en las cuales se aprecia los datos sin analizar, el análisis de pendientes, y un filtro de señal que se logra al obtener la frecuencia de oscilación y combinarla con sus  pendientes. 
+\\ \\
+El programa cuenta con un botón debajo del anterior que dice simulación, el software con los datos obtenidos y su respectivo análisis, realiza una simulación\cite{VISUAL}  del movimiento.
+\\ \\
+Por ultimo el programa cuenta con tres botones extras, uno que se encuentra arriba del botón firmware, que es la documentación de todo el programa y el montaje eléctrico, el botón detener que se encuentra debajo del botón comenzar, la función de este botón es el de dar la información de como detener la toma de datos del dispositivo  y el botón de limpiar que se encuentra abajo del botón detener, que reinicia el programa para comenzar con una nueva medición.
 
+\begin{Figure}
+\center
+\includegraphics[width=9.cm, height=8cm]{fig/Graficas.png}
+\captionof{figure}{Gráficas que arroja el programa free pops del análisis descrito en la figura 14.}
+\label{fig:g16}
+\end{Figure}
+\vspace{0.2cm}
 
+\begin{Figure}
+\center
+\includegraphics[width=9.cm, height=8cm]{fig/Graficas1.png}
+\captionof{figure}{Gráficas que arroja el programa free pops del análisis descrito en la figura 15.}
+\label{fig:g17}
+\end{Figure}
+\vspace{0.2cm}
+
+\section{Conclusiones}
+\begin{enumerate}
+\item[a. ] El periodo de oscilación del péndulo no depende de la masa, sino de la longitud de la cuerda y la aceleración gravitacional del lugar donde se realice el movimiento armónico. 
+
+\item[b. ] El software free pops, arroja un análisis de los resultados, con un margen de error muy pequeño, lo que da confianza al momento de llevar este modulo al aula de clase.
+
+\item[c. ] Las practicas de laboratorio cuando se complementan con los laboratorios virtuales ofrecen una ventaja en el asimilar del saber especifico de algún tema particular de la ciencia; debido a la misma naturaleza didáctica demostrativa que esta conlleva.
+
+\item[d. ] Las nuevas tecnologías de la información ofrecen un medio para lograr interactuar con los estudiantes y que estos muestren mejor disposición hacia la clase. 
+
+\item[e. ] Las nuevas tecnologías de la información ofrecen una manera didáctica y en muchas ocasiones divertida para que los estudiantes analicen, saquen sus propias conclusiones y aprendan de experiencias hechas en el laboratorio, dando una ayuda importante a la clase magistral.
+
+\item[f. ] El software y el hardware libre favorecen la educación y fomentan el aprendizaje de las ciencias.
+
+\end{enumerate}
 \end{multicols}
 % The bibliography
 \begin{thebibliography}{99}
 \bibitem{REDISH} Redish, Edward F, \emph{Millikan Award Lecture 1998: Building as cience of teaching physics}, Am. J. Phys. 67 (1999).
 \bibitem{GALILEO} Serna, E., José Marquiná, F., \& Fernández, E. GALILEO GALILEI. FACULTAD DE INGENIERÍAS, FUNDACION UNIVERSITARIA LUIS AMIGO.
 \bibitem{VISUAL} García, C. P. (2008). Proyecto Physthones. Simulaciones Físicas en Visual Python (0.1). Un libro libre de Alqua.
-\bibitem{MICROCONTROLADOR} Muñoz, N. D., Andrade, C. A., \& Londoño Ospina, N. (2011). Diseño y construcción de un robot móvil orientado a la enseñanza e investigación. Revista Científica Ingeniería y Desarrollo, 19(19), 114-127.
+\bibitem{MICROCONTROLADOR} Muñoz, N. D., Andrade, C. A., \& Londoño Ospina, N. (2011). Diseño y construcción de un robot móvil orientado a la enseñanza e investigación. Revista Científica Ingeniería y Desarrollo.
+\bibitem{GIANCOLI} Giancoli, D. C. (1984). General physics. Englewood Cliffs, NJ: Prentice-Hall.
 
 \end{thebibliography}
 \end{document}
