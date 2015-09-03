@@ -1,15 +1,15 @@
 \select@language {english}
 \select@language {spanish}
-\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{4}{section.1}
-\contentsline {section}{\numberline {2}Configuraci\IeC {\'o}n experimental}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}Elaboraci\IeC {\'o}n del instrumento de medici\IeC {\'o}n}{4}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Materiales}{4}{subsubsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.2}Montaje del hardware}{5}{subsubsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.3}Instalaci\IeC {\'o}n del software free pops}{8}{subsubsection.2.1.3}
-\contentsline {subsubsection}{\numberline {2.1.4}Primer uso de free pops}{8}{subsubsection.2.1.4}
-\contentsline {subsection}{\numberline {2.2}Montaje de laboratorio}{9}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Materiales}{9}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Montaje}{9}{subsubsection.2.2.2}
-\contentsline {section}{\numberline {3}Experiencia de laboratorio}{10}{section.3}
-\contentsline {section}{\numberline {4}Analisis de resultados}{10}{section.4}
-\contentsline {section}{\numberline {5}Conclusiones}{12}{section.5}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}
+\contentsline {section}{\numberline {2}Configuraci\IeC {\'o}n experimental}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Elaboraci\IeC {\'o}n del instrumento de medici\IeC {\'o}n}{3}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Materiales}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Montaje del hardware}{4}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Instalaci\IeC {\'o}n del software free pops}{6}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Primer uso de free pops}{7}{subsubsection.2.1.4}
+\contentsline {subsection}{\numberline {2.2}Montaje de laboratorio}{7}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Materiales}{7}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Montaje}{8}{subsubsection.2.2.2}
+\contentsline {section}{\numberline {3}Experiencia de laboratorio}{8}{section.3}
+\contentsline {section}{\numberline {4}Analisis de resultados}{8}{section.4}
+\contentsline {section}{\numberline {5}Conclusiones}{10}{section.5}
