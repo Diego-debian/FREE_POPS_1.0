@@ -34,7 +34,7 @@
 
 \tolerance=10000
 
-\title{\bf{Experimento demostrativo del periodo de oscilación del péndulo simple, para el aula de clase}}
+\title{\bf{Experimento demostrativo del periodo de oscilación del péndulo, para el aula de clase}}
 \author{Julian Salamanca\footnote{jasalamanca@udistrital.edu.co}, Diego Parra\footnote{diegoestudianteud1@gmail.com} \\
   Universidad Distrital, Calle 3 No 26A-40 Bogotá-Colombia\\
   Grupo Física e Informática ``FISINFOR''
@@ -151,7 +151,7 @@ El botón es para reiniciar el microcontrolador en caso de necesitarlo, Fig. 4 y
 \label{fig:g4}
 \end{Figure}
 
-El modulo bluetooth se debe conectar de la siguiente manera: el pin 2 de la tarjeta arduino es el Rx este va conectado al Tx del blueetooth, el pin 3 del microcontrolador es el Tx y va conectado al pin Rx del bluetooth, Fig. 4 y Fig. 5, el pin GND del bluetooth debe ir a tierra, ahora el pin de Vcc del bluetooth se conecta 5V. 
+El modulo bluetooth se debe conectar de la siguiente manera: el pin 2 de la tarjeta arduino es el Rx este va conectado al Tx del bluetooth, el pin 3 del microcontrolador es el Tx y va conectado al pin Rx del bluetooth, Fig. 4 y Fig. 5, el pin GND del bluetooth debe ir a tierra, ahora el pin de Vcc del bluetooth se conecta 5V. 
 
 \begin{Figure}
 \center
@@ -165,7 +165,7 @@ La parte negativa del diodo  emisor infrarrojo se conecta a un extremo de una re
 \begin{Figure}
 \center
 \includegraphics[width=7.cm, height=4cm]{fig/s_esquema.png}
-\captionof{figure}{Conexiones de los sensores a la tarjeta micro-controladora atmega328, el diodo receptor infrarrojo es el que se encuentra en la parte izquierda de la figura. El diodo emisor infrarrojo es el que se encuentra en la parte derecha de la figura conectado a tierra a tráves de una resistencia, y, al pin 4 de su otro extremo con el microcontrolador.}
+\captionof{figure}{Conexiones de los sensores a la tarjeta micro-controladora atmega328, el diodo receptor infrarrojo es el que se encuentra en la parte izquierda de la figura. El diodo emisor infrarrojo es el que se encuentra en la parte derecha de la figura conectado con tierra a tráves de una resistencia, y, al pin 4 de su otro extremo con el microcontrolador.}
 \label{fig:g6}
 \end{Figure}
 
@@ -254,7 +254,7 @@ Para el primer uso de free pops es necesario:
 
 \begin{enumerate}
 \item[a. ] Uno de los extremos de la cuerda, debe atarse a un eje de giro y el otro a la masa, formando de esta manera un péndulo,  debajo de la masa, debe colocarse el montaje eléctrico de free pops, asegurándose de que los diodos infrarrojos queden a menos de 12  centímetros  de la masa, figura 12.A y 12.B.
-\item[b. ] El transportador, se  utiliza para medir el ángulo del que se suelta la masa, para que el péndedulo comience a oscilar.
+\item[b. ] El transportador, se  utiliza para medir el ángulo del que se suelta la masa, para que el péndulo comience a oscilar.
 \end{enumerate}
 
 \begin{Figure}	
@@ -276,11 +276,11 @@ Una vez terminado de capturar los datos del sistema oscilante,  se debe medir la
 \begin{Figure}
 \center
 \includegraphics[width=9.cm, height=4cm]{fig/graf1.png}
-\captionof{figure}{Free pops captura  y grafica los datos en  tiempo real al oprimir el botón comenzar.}
+\captionof{figure}{Free pops captura  y gráfica los datos en  tiempo real al oprimir el botón comenzar.}
 \label{fig:g13}
 \end{Figure}
 
-\section{Analisis de resultados}
+\section{Análisis de resultados}
 Oprimir el botón analizar que se encuentra bajo el menú analizar datos, Lo que hará el programa, es ir al archivo donde se capturaron los datos y empezara hallar las pendientes, una vez obtenidas las pendientes lo que hará sera contar las oscilaciones que dio el péndulo,  y con las ecuaciones\cite{GIANCOLI} del movimiento armónico simple se obtiene  la frecuencia\ref{eqn:frecuencia}  de oscilación del péndulo\footnote{ Ecuación 1, f es la frecuencia, N es el numero de oscilaciones y t es el tiempo en el que dio las oscilaciones el péndulo.},ecuación 1; el periodo\ref{eqn:periodo} de oscilación\footnote{Ecuación 2, T es el periodo de oscilación, f es la frecuencia.}, ecuación 2; la frecuencia\ref{eqn:frecueniangular} angular\footnote{ Ecuación 3, $\omega^2$ es la frecuencia angular al cuadrado, $\pi $ es 3.141592, f es la frecuencia.}, ecuación 3; la longitud\ref{eqn:longitud} de la cuerda \footnote{ Ecuación 4, g es la aceleración gravitacional que tiene un valor de 9.81 $\frac{m}{s^2}$, $\omega^2$ es la frecuencia angular al cuadrado.}, ecuación 4; una vez termina de analizar los datos, aparecen los resultados en la ventana principal de free pops.
 
 \begin{equation}

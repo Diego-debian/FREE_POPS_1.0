@@ -11,5 +11,5 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Materiales}{7}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Montaje}{8}{subsubsection.2.2.2}
 \contentsline {section}{\numberline {3}Experiencia de laboratorio}{8}{section.3}
-\contentsline {section}{\numberline {4}Analisis de resultados}{8}{section.4}
+\contentsline {section}{\numberline {4}An\IeC {\'a}lisis de resultados}{8}{section.4}
 \contentsline {section}{\numberline {5}Conclusiones}{10}{section.5}
